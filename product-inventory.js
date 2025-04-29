@@ -8,7 +8,7 @@ const products = [
 
 function calculateDiscount(price, discountRate) {
     if (typeof price !== 'number' || typeof discountRate !== 'number') return null;
-    if (discountRate < 0 || discountRate > 1) return null;
+    if (discountRate < 0) return null;
     return price *= (1 - discountRate / 100);
 }
 
